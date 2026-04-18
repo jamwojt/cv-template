@@ -1,0 +1,13 @@
+name: John Doe
+dob: 29.05.1917
+city: Vienna
+email: jdoe@yahoo.com
+phone: 000 000 000
+imagePath: "image.jpg"
+education:
+  - {start: September 2000, end: October 2000, name: My Uni, desc: My Major}
+experience:
+  - {start: November 2000, end: Now, place: My Job, role: Intern, desc: "Copying documents, and bringing coffee"}
+skills:
+  - none
+  - nothing special
