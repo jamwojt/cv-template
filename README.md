@@ -17,6 +17,7 @@ Top level parts of the yaml file. The format requires:
 - city
 - email
 - phone
+- imagePath (file path to the image displayed on the CV)
 
 ### Education
 Education is a list of dictionaries with keywords:
