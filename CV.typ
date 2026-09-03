@@ -16,40 +16,16 @@
     #text(13pt)[Curriculum Vitae]
   ]
 
-  table(
-    columns: (7fr, 3fr),
-    align: top,
-    stroke: none,
-    [
-      #text(14pt, weight: 725)[#info.name] \ #line(length: 100%)
-      #table(
-        columns: (1fr, 1fr),
-        align: top,
-        stroke: none,
-        text(weight: 700)[Date of Birth:], [#info.dob],
-        text(weight: 700)[City:], [#info.city],
-        text(weight: 700)[Email Address:], [#info.email],
-        text(weight: 700)[Phone Number:], [#info.phone],
-      )
-    ],
-    [
-      #align(right + top)[#image(info.imagePath, height: 14%)]
-    ],
-  )
-
-  text(12pt, weight: 725)[Education]
+  text(14pt, weight: 725)[#info.name]
   line(length: 100%)
-
   table(
-    columns: (auto, 1fr),
+    columns: (1fr, 1fr),
     align: top,
     stroke: none,
-
-    ..info.education.map(d => (
-      [#d.start - #d.end],
-      [#text(weight: 700)[#d.name] \ #d.desc])
-    ).flatten()
-      
+    text(weight: 700)[Date of Birth:], [#info.dob],
+    text(weight: 700)[City:], [#info.city],
+    text(weight: 700)[Email Address:], [#info.email],
+    text(weight: 700)[Phone Number:], [#info.phone],
   )
 
   text(12pt, weight: 725)[Experience]
@@ -64,6 +40,20 @@
       [#d.start - #d.end],
       [#text(weight: 700)[#d.place \ #d.role] \ #d.desc]
     )).flatten()
+  )
+
+  text(12pt, weight: 725)[Education]
+  line(length: 100%)
+
+  table(
+    columns: (auto, 1fr),
+    align: top,
+    stroke: none,
+
+    ..info.education.map(d => (
+      [#d.start - #d.end],
+      [#text(weight: 700)[#d.name] \ #d.desc])
+    ).flatten()
   )
 
   text(12pt, weight: 725)[Skills]
